@@ -1,0 +1,14 @@
+<div class="sidenav" [class.open]="isOpen" (click)="$event.stopPropagation()">
+  <div class="close-button" (click)="closeSidenav()">
+    <span class="bar bar1"></span>
+    <span class="bar bar2"></span>
+    <span class="bar bar3"></span>
+
+  </div>
+
+  <nav>
+    <a routerLink="/dashboard" routerLinkActive="active" (click)="closeSidenav()">Dashboard</a>
+    <a routerLink="/events" routerLinkActive="active" (click)="closeSidenav()">Events</a>
+    <a routerLink="/CreateEvents" routerLinkActive="active"(click)="closeSidenav()"> Admin/events</a>
+  </nav>
+</div>

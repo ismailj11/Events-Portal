@@ -1,0 +1,27 @@
+<!-- Toolbar Section -->
+<div class="toolbar">
+  <div class="menu-button" (click)="toggleSidenav()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+  <span class="toolbar-title">Events Portal</span>
+  
+  <div class="toolbar-buttons">
+    <button class="icon-button" title="Like">&#10084;</button>
+    <button class="icon-button" title="Share">&#128257;</button>
+    <button class="icon-button" title="Notifications" (click)="toggleNotifications()">🔔</button>
+    <button class="icon-button" title="Account">👤</button>
+  </div>
+</div>
+
+<!-- Overlay for Sidenav -->
+<div class="overlay" *ngIf="sidenavOpen" (click)="closeSidenav()"></div>
+
+<!-- Sidenav Section -->
+<app-sidenav [isOpen]="sidenavOpen" (sidenavClose)="closeSidenav()"></app-sidenav>
+
+<!-- Main Content Area -->
+<div class="content-container" [class.shifted]="sidenavOpen">
+  <router-outlet></router-outlet>
+</div>

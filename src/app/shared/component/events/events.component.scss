@@ -1,0 +1,109 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Black background */
+  color: #b4ff00; /* Neon green text */
+  font-family: Arial, sans-serif;
+}
+.events-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Move the content to the top */
+  width: 100%;
+  padding-top: 40px; /* Adjust this value to control the vertical alignment */
+  padding-bottom: 20px; /* Optional */
+  min-height: 100vh;
+  background-color: #000;
+}
+
+
+h1 {
+  color: #b4ff00;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.events-table {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px; /* Space between "Create New" and the table */
+  border-collapse: collapse;
+  background-color: #000;
+  color: #b4ff00;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.events-table th, .events-table td {
+  padding: 15px;
+  border-bottom: 1px solid #333;
+  text-align: left;
+}
+
+.events-table th {
+  background-color: #000;
+  color: #b4ff00;
+  font-weight: bold;
+}
+
+.events-table tr:hover {
+  background-color: #333;
+}
+
+.action-buttons button {
+  color: #b4ff00;
+}
+
+.action-buttons button:hover {
+  color: #ff4d4d;
+}
+
+.no-events {
+  color: #888;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Updated button style to match your example */
+.create-button {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: transparent; /* Hide text initially */
+  border: 2px solid #b4ff00; /* Neon green border */
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  overflow: hidden;
+  transition: color 0.3s ease;
+
+  &::after {
+    content: "Create New"; /* Placeholder text */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #b4ff00; /* Neon green background */
+    color: #000; /* Black text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    border-radius: 5px;
+  }
+
+  &:hover::after {
+    opacity: 0; /* Hide background color and placeholder on hover */
+  }
+
+  &:hover {
+    color: #b4ff00; /* Show actual button text in neon green on hover */
+  }
+}

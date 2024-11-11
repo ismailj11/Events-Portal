@@ -1,0 +1,29 @@
+:host {
+    display: block;
+    background-color: #000000; // Black background
+    color: #b4ff00; // Neon green text
+    min-height: 100vh; // Full viewport height
+    padding: 20px;
+  }
+  
+  // Center text and other content
+  .dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .dashboard-title {
+    font-size: 2.5rem; // Large font size for main text
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #b4ff00; // Neon green
+  }
+  
+  .dashboard-subtitle {
+    font-size: 1.5rem;
+    color: #b4ff00;
+  }
+  
